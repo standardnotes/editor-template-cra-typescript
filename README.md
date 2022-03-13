@@ -9,30 +9,30 @@ Template for building editors for Standard Notes using Create React App and Type
 The general instructions setting up an environment to develop Standard Notes extensions can be found [here](https://docs.standardnotes.org/extensions/local-setup). You can also follow these instructions:
 
 1. Fork the [repository](https://github.com/standardnotes/editor-template-cra-typescript) on GitHub.
-2. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the repository.
-3. Run `cd editor-template-cra-typescript` to enter the `editor-template-cra-typescript` directory.
-4. Run `yarn install` to install the dependencies on your machine as they are described in `yarn.lock`.
+1. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the repository.
+1. Run `cd editor-template-cra-typescript` to enter the `editor-template-cra-typescript` directory.
+1. Run `yarn install` to install the dependencies on your machine as they are described in `yarn.lock`.
 
 ### Testing in the browser
 
-1. To run the app in development mode, run `yarn start` and visit http://localhost:3001. Press `ctrl/cmd + C` to exit development mode.
+1. To run the app in development mode, run `yarn start` and visit http://localhost:8001. Press `ctrl/cmd + C` to exit development mode.
 
 ### Testing in the Standard Notes app
 
 1.  Create an `ext.json` in the `public` directory. You have three options:
     1.  Use `sample.ext.json`.
-    2.  Create `ext.json` as a copy of `sample.ext.json`.
-    3.  Follow the instructions [here](https://docs.standardnotes.org/extensions/local-setup) with `url: "http://localhost:3000/index.html"`.
-2.  Install http-server using `sudo npm install -g http-server` then run `yarn server` to serve the `./build` directory at http://localhost:3000.
-3.  To build the app, run `yarn build`.
-4.  Install the editor into the [web](https://app.standardnotes.org) or [desktop](https://standardnotes.org/download) app with `http://localhost:3000/sample.ext.json` or with your custom `ext.json`. Press `ctrl/cmd + C` to shut down the server.
+    1.  Create `ext.json` as a copy of `sample.ext.json`.
+    1.  Follow the instructions [here](https://docs.standardnotes.org/extensions/local-setup) with `url: "http://localhost:3000/index.html"`.
+1.  Install http-server using `sudo npm install -g http-server` then run `yarn server` to serve the `./build` directory at http://localhost:3000.
+1.  To build the app, run `yarn build`.
+1.  Install the editor into the [web](https://app.standardnotes.org) or [desktop](https://standardnotes.org/download) app with `http://localhost:3000/sample.ext.json` or with your custom `ext.json`. Press `ctrl/cmd + C` to shut down the server.
 
 ### Deployment
 
 1. To make the source code prettier, run `yarn pretty`.
-2. To the deploy the build into the `gh-pages` branch of your repository on GitHub, run `yarn deploy-stable`.
-3. To deploy the build into to the `dev` branch for testing, run `yarn deploy-dev`.
-4. To deploy the built into the `build` branch for distributing, run `yarn deploy-build` for distributing builds.
+1. To the deploy the build into the `gh-pages` branch of your repository on GitHub, run `yarn deploy-stable`.
+1. To deploy the build into to the `dev` branch for testing, run `yarn deploy-dev`.
+1. To deploy the built into the `build` branch for distributing, run `yarn deploy-build` for distributing builds.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -43,7 +43,7 @@ In the project directory, you can run:
 #### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+Open [http://localhost:8001](http://localhost:8001) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.

@@ -21,7 +21,7 @@
   "homepage": ".",
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "PORT=3001 react-scripts start",
+    "start": "PORT=8001 react-scripts start",
     "build": "react-scripts build",
     "clean-deploy-cache": "rm -rf node_modules/.cache/gh-pages",
     "predeploy": "yarn run pretty && yarn run build && yarn clean-deploy-cache",
