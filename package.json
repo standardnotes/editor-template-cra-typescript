@@ -23,6 +23,7 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "PORT=8001 react-scripts start",
     "build": "react-scripts build",
+    "prepublishOnly": "npm run build",
     "clean-deploy-cache": "rm -rf node_modules/.cache/gh-pages",
     "predeploy": "yarn run pretty && yarn run build && yarn clean-deploy-cache",
     "deploy-build": "yarn run predeploy && gh-pages -b build -d build",
