@@ -1,5 +1,5 @@
 import React from 'react';
-import { EditorKit, EditorKitDelegate } from 'sn-editor-kit';
+import EditorKit, { EditorKitDelegate } from '@standardnotes/editor-kit';
 
 export enum HtmlElementId {
   snComponent = 'sn-component',
@@ -24,16 +24,19 @@ const initialState = {
 let keyMap = new Map();
 
 export default class Editor extends React.Component<{}, EditorInterface> {
-  editorKit: any;
+  private editorKit?: EditorKit;
 
   constructor(props: EditorInterface) {
     super(props);
-    this.configureEditorKit();
     this.state = initialState;
   }
 
+  componentDidMount() {
+    this.configureEditorKit();
+  }
+
   configureEditorKit = () => {
-    let delegate = new EditorKitDelegate({
+    const delegate: EditorKitDelegate = {
       /** This loads every time a different note is loaded */
       setEditorRawText: (text: string) => {
         this.setState({
@@ -43,12 +46,11 @@ export default class Editor extends React.Component<{}, EditorInterface> {
       },
       clearUndoHistory: () => {},
       getElementsBySelector: () => [],
-    });
+    };
 
-    this.editorKit = new EditorKit({
-      delegate: delegate,
+    this.editorKit = new EditorKit(delegate, {
       mode: 'plaintext',
-      supportsFilesafe: false,
+      supportsFileSafe: false,
     });
   };
 
@@ -66,11 +68,12 @@ export default class Editor extends React.Component<{}, EditorInterface> {
   };
 
   saveNote = (text: string) => {
-    /** This will work in an SN context, but breaks the standalone editor,
+    /**
+     * This will work in an SN context, but breaks the standalone editor,
      * so we need to catch the error
      */
     try {
-      this.editorKit.onEditorValueChanged(text);
+      this.editorKit?.onEditorValueChanged(text);
     } catch (error) {
       console.log('Error saving note:', error);
     }
