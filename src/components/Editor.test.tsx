@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Editor from './components/Editor';
+import Editor from './Editor';
 
 test('renders Standard Notes documentation link', () => {
   render(<Editor />);
