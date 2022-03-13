@@ -5169,12 +5169,7 @@ filenamify@^4.3.0:
     strip-outer "^1.0.1"
     trim-repeated "^1.0.0"
 
-filesafe-embed@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/filesafe-embed/-/filesafe-embed-1.0.13.tgz#a9c523341615ae90c1c4a236c3879fc1ec50afe9"
-  integrity sha512-f6ar0hXiSBk9AUvmW0Vdcfc33DHZ1BBZj39vIOTo6eNagNhYDVpc3CE+G8829MJRnmYEHmPuy1sqOeF4nl26vg==
-
-filesafe-js@1.0.5, filesafe-js@^1.0.5:
+filesafe-js@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/filesafe-js/-/filesafe-js-1.0.5.tgz#74068d1b59d2aa5df1be6a8cad6feb76d58fb3d5"
   integrity sha512-AqYirPpw2kFr9tfYWbEfbpGJP/+9FS25mu+8xZjcmTgMP8xeLm8HjjFQYZ+aX1TgsvfP2+bAL8sMNHtjFiM9TQ==
@@ -5887,7 +5882,7 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^7.0.4:
+husky@^7.0.0:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
   integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==
