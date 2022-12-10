@@ -15,7 +15,15 @@ The general instructions setting up an environment to develop Standard Notes ext
 
 ### Testing in the browser
 
+#### Local
+
 1. To run the app in development mode, run `yarn start` and visit http://localhost:8001. Press `ctrl/cmd + C` to exit development mode.
+
+#### Docker
+
+1. To run the app in a docker container simply run `docker compose up`.
+
+To build the app run `docker compose exec editor yarn run build`.
 
 ### Testing in the Standard Notes app
 
