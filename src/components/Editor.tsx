@@ -1,5 +1,6 @@
 import React from 'react';
 import EditorKit, { EditorKitDelegate } from '@standardnotes/editor-kit';
+import { AppDataField } from '@standardnotes/models';
 
 export enum HtmlElementId {
   snComponent = 'sn-component',
@@ -45,12 +46,11 @@ export default class Editor extends React.Component<{}, EditorInterface> {
         });
       },
       clearUndoHistory: () => {},
-      getElementsBySelector: () => [],
+      handleRequestForContentHeight: () => undefined,
     };
 
     this.editorKit = new EditorKit(delegate, {
       mode: 'plaintext',
-      supportsFileSafe: false,
     });
   };
 
@@ -97,6 +97,7 @@ export default class Editor extends React.Component<{}, EditorInterface> {
 
   render() {
     const { text } = this.state;
+    const locked = this.editorKit?.getItemAppDataValue(AppDataField.Locked);
     return (
       <div
         className={
@@ -140,6 +141,7 @@ export default class Editor extends React.Component<{}, EditorInterface> {
           onFocus={this.onFocus}
           onKeyDown={this.onKeyDown}
           onKeyUp={this.onKeyUp}
+          disabled={Boolean(locked)}
         />
       </div>
     );
