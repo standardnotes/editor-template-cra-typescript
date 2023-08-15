@@ -37,6 +37,13 @@ To build the app run `docker compose exec editor yarn run build`.
 
 ### Deployment
 
+#### Automatic
+
+1. To make the source code prettier, run `yarn pretty`.
+1. By default, whenever you push a commit to the `main` branch, a github action will run, build your project, and deploy to the `gh-pages` branch on GitHub. If you do not want to use this feature, please remove the `.github/workflows/deploy.yml` file.
+
+#### Manual
+
 1. To make the source code prettier, run `yarn pretty`.
 1. To the deploy the build into the `gh-pages` branch of your repository on GitHub, run `yarn deploy-stable`.
 1. To deploy the build into to the `dev` branch for testing, run `yarn deploy-dev`.
